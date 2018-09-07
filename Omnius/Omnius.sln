@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Omnius.Domain", "Omnius.Domain\Omnius.Domain.csproj", "{09BFA32E-F6E2-4AF8-BC92-D3970E112AFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Omnius.UI", "UI\Omnius.UI.csproj", "{D813829A-3291-46B8-9FF7-DE2B4E23D6EA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{09BFA32E-F6E2-4AF8-BC92-D3970E112AFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09BFA32E-F6E2-4AF8-BC92-D3970E112AFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09BFA32E-F6E2-4AF8-BC92-D3970E112AFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09BFA32E-F6E2-4AF8-BC92-D3970E112AFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D813829A-3291-46B8-9FF7-DE2B4E23D6EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D813829A-3291-46B8-9FF7-DE2B4E23D6EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D813829A-3291-46B8-9FF7-DE2B4E23D6EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D813829A-3291-46B8-9FF7-DE2B4E23D6EA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A7D3532E-CA52-4628-8487-95283969BDF9}
+	EndGlobalSection
+EndGlobal

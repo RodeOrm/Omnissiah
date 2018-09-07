@@ -1,0 +1,79 @@
+﻿@using Omnius.UI.Models
+
+@model IndexViewModel
+
+@{
+    ViewData["Title"] = "Реестр потребителей";
+}
+
+<div class="container" style="overflow-x:auto;">
+    <h3>Реестр потребителей</h3>
+    @Html.ActionLink("Добавить", "Create")
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>
+                   Фамилия @*@Html.DisplayNameFor(model => model.Customers)*@
+                </th>
+                <th>
+                   Имя @*@Html.DisplayNameFor(model => model.Name)*@
+                </th>
+                <th>
+                   Отчество @*@Html.DisplayNameFor(model => model.PaternalName)*@
+                </th>
+                <th>
+                   Дата рождения @*@Html.DisplayNameFor(model => model.DateOfBirth)*@
+                </th>
+                <th>
+                   Действия
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Customers)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FamilyName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PaternalName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DateOfBirth)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Изменить", "Edit", new { id = item.ID }) | @Html.ActionLink("Подробнее", "Details", new { id = item.ID }) | @Html.ActionLink("Удалить", "Delete", new { id = item.ID })
+
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+        @if (Model.PageViewModel.HasPreviousPage)
+        {
+            <a asp-action="List"
+               asp-route-page="@(Model.PageViewModel.PageNumber - 1)"
+               class="btn btn-default btn">
+                <i class="glyphicon glyphicon-chevron-left"></i>
+                Назад
+            </a>
+        }
+        @if (Model.PageViewModel.HasNextPage)
+        {
+            <a asp-action="List"
+               asp-route-page="@(Model.PageViewModel.PageNumber + 1)"
+               class="btn btn-default btn">
+                <i class="glyphicon glyphicon-chevron-right"></i>
+                Вперед
+            </a>
+        }
+</div>
+
+@{
+    Layout = "_Layout";
+}

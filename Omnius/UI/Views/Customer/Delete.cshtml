@@ -1,0 +1,63 @@
+﻿@model Omnius.Domain.Entities.Customer
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h3>Вы действительно хотите удалить этого потребителя?</h3>
+<div>
+    <hr />
+    <form class="form-horizontal" method="Post">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FamilyName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FamilyName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PaternalName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PaternalName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstCase)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FirstCase)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SecondCase)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SecondCase)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Sex)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Sex)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfBirth)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateOfBirth)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfDeath)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateOfDeath)
+        </dd>
+        <button type="submit" class="button"><span>Удалить</span></button>
+
+        <a asp-action="List">Вернуться</a>
+    </form>
+</div>
