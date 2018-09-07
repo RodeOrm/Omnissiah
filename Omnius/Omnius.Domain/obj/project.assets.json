@@ -1835,11 +1835,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\Legion\\Omnius\\Omnius.Domain\\Omnius.Domain.csproj",
+      "projectUniqueName": "G:\\StagingArea\\Omnius\\Omnius.Domain\\Omnius.Domain.csproj",
       "projectName": "Omnius.Domain",
-      "projectPath": "G:\\Legion\\Omnius\\Omnius.Domain\\Omnius.Domain.csproj",
+      "projectPath": "G:\\StagingArea\\Omnius\\Omnius.Domain\\Omnius.Domain.csproj",
       "packagesPath": "C:\\Users\\MSI-PC\\.nuget\\packages\\",
-      "outputPath": "G:\\Legion\\Omnius\\Omnius.Domain\\obj\\",
+      "outputPath": "G:\\StagingArea\\Omnius\\Omnius.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -7,3 +7,12 @@ G:\Legion\Omnius\Omnius.Domain\obj\Debug\netcoreapp2.1\Omnius.Domain.AssemblyInf
 G:\Legion\Omnius\Omnius.Domain\bin\Debug\netcoreapp2.1\Omnius.Domain.pdb
 G:\Legion\Omnius\Omnius.Domain\obj\Debug\netcoreapp2.1\Omnius.Domain.dll
 G:\Legion\Omnius\Omnius.Domain\obj\Debug\netcoreapp2.1\Omnius.Domain.pdb
+G:\StagingArea\Omnius\Omnius.Domain\bin\Debug\netcoreapp2.1\Omnius.Domain.deps.json
+G:\StagingArea\Omnius\Omnius.Domain\bin\Debug\netcoreapp2.1\Omnius.Domain.dll
+G:\StagingArea\Omnius\Omnius.Domain\bin\Debug\netcoreapp2.1\Omnius.Domain.pdb
+G:\StagingArea\Omnius\Omnius.Domain\obj\Debug\netcoreapp2.1\Omnius.Domain.csprojAssemblyReference.cache
+G:\StagingArea\Omnius\Omnius.Domain\obj\Debug\netcoreapp2.1\Omnius.Domain.csproj.CoreCompileInputs.cache
+G:\StagingArea\Omnius\Omnius.Domain\obj\Debug\netcoreapp2.1\Omnius.Domain.AssemblyInfoInputs.cache
+G:\StagingArea\Omnius\Omnius.Domain\obj\Debug\netcoreapp2.1\Omnius.Domain.AssemblyInfo.cs
+G:\StagingArea\Omnius\Omnius.Domain\obj\Debug\netcoreapp2.1\Omnius.Domain.dll
+G:\StagingArea\Omnius\Omnius.Domain\obj\Debug\netcoreapp2.1\Omnius.Domain.pdb
