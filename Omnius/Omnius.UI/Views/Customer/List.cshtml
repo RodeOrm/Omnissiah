@@ -35,7 +35,7 @@
         <tbody>
             @foreach (var item in Model.Customers)
             {
-            <tr>
+            <tr onclick="location.href = '@(Url.Action("Edit", "Customer", new { id = item.ID }))'" style="cursor: pointer;">
                 <td>
                     @Html.DisplayFor(modelItem => item.FamilyName)
                 </td>
@@ -60,8 +60,7 @@
                     @Html.DisplayFor(modelItem => item.DateOfBirth)
                 </td>
                 <td>
-                    @Html.ActionLink("Подробнее", "Edit", new { id = item.ID }) | @Html.ActionLink("Удалить", "Delete", new { id = item.ID })
-
+                    @Html.ActionLink("Удалить", "Delete", new { id = item.ID })
                 </td>
             </tr>
             }

@@ -17,11 +17,10 @@ namespace Omnius.UI.Controllers
         public ActionResult List(int page = 1)
         {
 
-            int pageSize = 3;
+            int pageSize = 15;
 
             var count = repo.GetNumberOfCustomers();
-          
-
+    
             PageViewModel pageViewModel = new PageViewModel(count, page, pageSize); 
             var items = repo.GetCustomers(pageSize, pageViewModel.PageNumber);
 
@@ -57,6 +56,9 @@ namespace Omnius.UI.Controllers
         public ActionResult Edit(int id)
         {
             Customer customer = repo.Get(id);
+            customer.Contacts = repo.GetContacts(customer);
+          
+
             if (customer != null)
                 return View(customer);
             return NotFound();

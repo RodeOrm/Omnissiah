@@ -67,7 +67,7 @@ using UI.Models;
             WriteLiteral("\r\n<h3>Вы действительно хотите удалить этого потребителя?</h3>\r\n<div>\r\n    <hr />\r\n    ");
             EndContext();
             BeginContext(170, 1567, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5704692be82843479fd882f40ab89b21", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "af988f0cc6dc4c3795264443dbd9ae9b", async() => {
                 BeginContext(214, 28, true);
                 WriteLiteral("\r\n        <dt>\r\n            ");
                 EndContext();
@@ -232,7 +232,7 @@ using UI.Models;
                 WriteLiteral("\r\n        </dd>\r\n        <button type=\"submit\" class=\"button\"><span>Удалить</span></button>\r\n\r\n        ");
                 EndContext();
                 BeginContext(1690, 34, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9e73fa194cc540aa8a583c1a4464f59a", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c080591d09434ecba5de0e35961d470b", async() => {
                     BeginContext(1711, 9, true);
                     WriteLiteral("Вернуться");
                     EndContext();

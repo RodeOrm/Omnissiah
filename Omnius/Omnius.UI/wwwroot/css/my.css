@@ -69,3 +69,6 @@
             opacity: 1;
             right: 0;
         }
+.sortable tr {
+    cursor: pointer;
+}

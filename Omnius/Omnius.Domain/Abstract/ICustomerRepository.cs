@@ -17,5 +17,14 @@ namespace Omnius.Domain.Abstract
         IEnumerable<Customer> GetCustomers(int pageNumber, int pageSize);
         void Update(Customer customer);
         int GetNumberOfCustomers();
+
+        // То, что связано с Контактами. Доступ через репозиторий Потребителя, 
+        // т.к. не имеет своей ценности вне него
+        // Возможно придется переделать
+        IEnumerable<Contact> GetContacts(Customer customer);
+        void CreateContact(Contact contact);
+        Contact GetContact(int id);
+        void UpdateContact(Contact contact);
+        void DeleteContact(int id);
     }
 }

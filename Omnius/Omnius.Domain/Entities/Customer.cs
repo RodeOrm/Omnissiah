@@ -1,15 +1,16 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.Collections.Generic;
+using Omnius.Domain.Abstract;
 
 namespace Omnius.Domain.Entities
 {
-    public class Customer
+    public class Customer 
+    //Aggregate Root
+
     {
-
         public int ID { get; set; }
-
-
+        
         [Display(Name = "Имя")]
         [Required(ErrorMessage = "Не указано имя")]
         public string Name { get; set; }
@@ -44,15 +45,13 @@ namespace Omnius.Domain.Entities
         [Display(Name = "Дата смерти")]
         public DateTime DateOfDeath { get; set; }
 
-        /*
-        public List<Contact> Contacts { get; set; }
 
-        public Customer()
+        public List<Contact> contacts = new List<Contact>();
+
+        public IEnumerable<Contact> Contacts
         {
-
-            Contacts = new List<Contact>();
-
+            get; set;
         }
-        */
+
     }
 }
