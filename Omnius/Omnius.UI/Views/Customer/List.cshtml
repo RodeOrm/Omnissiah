@@ -22,35 +22,48 @@
                    Отчество @*@Html.DisplayNameFor(model => model.PaternalName)*@
                 </th>
                 <th>
+                    Пол
+                </th>
+                <th>
                    Дата рождения @*@Html.DisplayNameFor(model => model.DateOfBirth)*@
                 </th>
                 <th>
-                   Действия
+                   
                 </th>
             </tr>
         </thead>
         <tbody>
             @foreach (var item in Model.Customers)
             {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.FamilyName)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Name)
-                    </td>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FamilyName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PaternalName)
+                </td>
+                <td>
+                   @switch (item.Sex)
+                    {
+                       case true:
+                              <p>Мужчина</p>
+                               break;
+                       case false:
+                               <p>Женщина</p>
+                                break;
+                   }
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateOfBirth)
+                </td>
+                <td>
+                    @Html.ActionLink("Подробнее", "Edit", new { id = item.ID }) | @Html.ActionLink("Удалить", "Delete", new { id = item.ID })
 
-                    <td>
-                        @Html.DisplayFor(modelItem => item.PaternalName)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.DateOfBirth)
-                    </td>
-                    <td>
-                        @Html.ActionLink("Изменить", "Edit", new { id = item.ID }) | @Html.ActionLink("Подробнее", "Details", new { id = item.ID }) | @Html.ActionLink("Удалить", "Delete", new { id = item.ID })
-
-                    </td>
-                </tr>
+                </td>
+            </tr>
             }
         </tbody>
     </table>
@@ -62,16 +75,16 @@
                 <i class="glyphicon glyphicon-chevron-left"></i>
                 Назад
             </a>
-        }
-        @if (Model.PageViewModel.HasNextPage)
-        {
+                       }
+                       @if (Model.PageViewModel.HasNextPage)
+                       {
             <a asp-action="List"
-               asp-route-page="@(Model.PageViewModel.PageNumber + 1)"
+                              asp-route-page="@(Model.PageViewModel.PageNumber + 1)"
                class="btn btn-default btn">
                 <i class="glyphicon glyphicon-chevron-right"></i>
                 Вперед
             </a>
-        }
+                   }
 </div>
 
 @{

@@ -33,16 +33,7 @@ namespace Omnius.UI.Controllers
             
             return View(ViewModel);
         }
-   
-       
 
-        public ActionResult Details(int id)
-        {
-            Customer Customer = repo.Get(id);
-            if (Customer != null)
-                return View(Customer);
-            return NotFound();
-        }
 
         public ActionResult Create()
         {

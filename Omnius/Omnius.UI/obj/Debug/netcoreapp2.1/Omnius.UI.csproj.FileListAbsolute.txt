@@ -53,7 +53,6 @@ G:\StagingArea\Omnius\Omnius.UI\obj\Debug\netcoreapp2.1\Omnius.UI.TagHelpers.out
 G:\StagingArea\Omnius\Omnius.UI\obj\Debug\netcoreapp2.1\Omnius.UI.RazorCoreGenerate.cache
 G:\StagingArea\Omnius\Omnius.UI\obj\Debug\netcoreapp2.1\Razor\Views\Customer\Create.g.cshtml.cs
 G:\StagingArea\Omnius\Omnius.UI\obj\Debug\netcoreapp2.1\Razor\Views\Customer\Delete.g.cshtml.cs
-G:\StagingArea\Omnius\Omnius.UI\obj\Debug\netcoreapp2.1\Razor\Views\Customer\Details.g.cshtml.cs
 G:\StagingArea\Omnius\Omnius.UI\obj\Debug\netcoreapp2.1\Razor\Views\Customer\Edit.g.cshtml.cs
 G:\StagingArea\Omnius\Omnius.UI\obj\Debug\netcoreapp2.1\Razor\Views\Customer\List.g.cshtml.cs
 G:\StagingArea\Omnius\Omnius.UI\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
