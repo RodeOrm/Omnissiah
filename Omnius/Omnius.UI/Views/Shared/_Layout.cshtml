@@ -4,7 +4,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["List"]</title>
-
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/my.css" />
@@ -16,20 +15,16 @@
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>
 
-  
 </head>
 <body>
-
-        <div class="topnav" id="navbar">
-            <a class="active" href="~/Customer/List">Потребители</a>
-            <a href="#news">Приборы учета</a>
-            <a href="#contact">Лицевые счета</a>
-            <a href="#about">О программе</a>
-        </div>
-
+    <div class="topnav" id="navbar">
+        <a class="active" href="~/Customer/List">Потребители</a>
+        <a href="#news">Приборы учета</a>
+        <a href="#contact">Лицевые счета</a>
+        <a href="#about">О программе</a>
+    </div>
 
     <partial name="_CookieConsentPartial" />
-
     <div class="container-fluid">
         @RenderBody()
         <hr />
@@ -37,7 +32,6 @@
             <p>&copy; Designed by Röde Orm</p>
         </footer>
     </div>
-
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
@@ -59,11 +53,9 @@
                 integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
         </script>
         <script src="~/js/site.min.js" asp-append-version="true"></script>
-
         <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js"></script>
         <script src="https://ajax.aspnetcdn.com/ajax/jquery.validation.unobtrusive/3.2.6/jquery.validate.unobtrusive.min.js"></script>
     </environment>
-
     @RenderSection("Scripts", required: false)
 </body>
 </html>

@@ -17,6 +17,7 @@ namespace Omnius.Domain.Entities
         [Display(Name = "Контактная информация")]
         [Required(ErrorMessage = "Укажите контактную информацию")]
         public string Value { get; set; }
+
     }
 
     public class ContactType

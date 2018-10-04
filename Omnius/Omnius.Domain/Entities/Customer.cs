@@ -5,12 +5,11 @@ using Omnius.Domain.Abstract;
 
 namespace Omnius.Domain.Entities
 {
-    public class Customer 
+    public class Customer
     //Aggregate Root
-
     {
         public int ID { get; set; }
-        
+
         [Display(Name = "Имя")]
         [Required(ErrorMessage = "Не указано имя")]
         public string Name { get; set; }
@@ -52,6 +51,7 @@ namespace Omnius.Domain.Entities
         {
             get; set;
         }
+
 
     }
 }

@@ -93,5 +93,28 @@ namespace Omnius.UI.Controllers
             repo.Delete(id);
             return RedirectToAction("List");
         }
+
+
+        public ActionResult CreateContact(int customerID)
+        {
+            //либо инициализатор, либо конструктор для контакта
+            //Contact contact = new Contact(CustomerID = customerID);
+            return View("CreateContact");
+        }
+
+        [HttpPost]
+        public ActionResult CreateContact(Contact contact)
+        {
+
+            if (ModelState.IsValid)
+            {
+                repo.CreateContact(contact);
+                return RedirectToAction("Edit");
+            }
+            else
+                return View("CreateContact");
+            ;
+        }
+
     }
 }
