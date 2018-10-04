@@ -53,7 +53,7 @@ namespace Omnius.UI.Controllers
             ;
         }
 
-        public ActionResult Edit(int id)
+        public ActionResult Edit(int id, int currentPage)
         {
             Customer customer = repo.Get(id);
             customer.Contacts = repo.GetContacts(customer);
@@ -65,12 +65,12 @@ namespace Omnius.UI.Controllers
         }
 
         [HttpPost]
-        public ActionResult Edit(Customer customer)
+        public ActionResult Edit(Customer customer, int currentPage)
         {
             if (ModelState.IsValid)
             {
                 repo.Update(customer);
-                return RedirectToAction("List");
+                return RedirectToAction("List", currentPage);
             }
             else
                 return View(customer);
@@ -97,9 +97,8 @@ namespace Omnius.UI.Controllers
 
         public ActionResult CreateContact(int customerID)
         {
-            //либо инициализатор, либо конструктор для контакта
-            //Contact contact = new Contact(CustomerID = customerID);
-            return View("CreateContact");
+            Contact newContact = new Contact { CustomerID = customerID };
+            return View(newContact);
         }
 
         [HttpPost]
@@ -109,7 +108,7 @@ namespace Omnius.UI.Controllers
             if (ModelState.IsValid)
             {
                 repo.CreateContact(contact);
-                return RedirectToAction("Edit");
+                return RedirectToAction("Edit", new { id = contact.CustomerID });
             }
             else
                 return View("CreateContact");

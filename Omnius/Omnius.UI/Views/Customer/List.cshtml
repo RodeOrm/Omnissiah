@@ -10,7 +10,7 @@
     <h3>Реестр потребителей</h3>
 
     <a asp-action="Create"
-             class="btn btn-success">
+       class="btn btn-success">
         <i class="glyphicon glyphicon-chevron-right"></i>
         Добавить
     </a>
@@ -41,7 +41,7 @@
         <tbody>
             @foreach (var item in Model.Customers)
             {
-                <tr onclick="location.href = '@(Url.Action("Edit", "Customer", new { id = item.ID }))'" style="cursor: pointer;">
+                <tr onclick="location.href = '@(Url.Action("Edit", "Customer", new { id = item.ID, currentPage = Model.PageViewModel.PageNumber }))'" style="cursor: pointer;">
                     <td>
                         @Html.DisplayFor(modelItem => item.FamilyName)
                     </td>
@@ -72,14 +72,15 @@
             }
         </tbody>
     </table>
+
     @if (Model.PageViewModel.HasPreviousPage)
     {
-        <a asp-action="List"
-           asp-route-page="@(Model.PageViewModel.PageNumber - 1)"
-           class="btn btn-default btn">
-            <i class="glyphicon glyphicon-chevron-left"></i>
-            Назад
-        </a>
+    <a asp-action="List"
+       asp-route-page="@(Model.PageViewModel.PageNumber - 1)"
+       class="btn btn-default btn">
+        <i class="glyphicon glyphicon-chevron-left"></i>
+        Назад (страница @(Model.PageViewModel.PageNumber - 1) из @(Model.PageViewModel.TotalPages))
+    </a>
     }
     @if (Model.PageViewModel.HasNextPage)
     {
@@ -88,6 +89,15 @@
            class="btn btn-default btn">
             <i class="glyphicon glyphicon-chevron-right"></i>
             Вперед
+        </a>
+    }
+    @if (Model.PageViewModel.HasNextPage)
+    {
+        <a asp-action="List"
+           asp-route-page="@(Model.PageViewModel.TotalPages)"
+           class="btn btn-default btn">
+            <i class="glyphicon glyphicon-chevron-right"></i>
+            Последняя страница (@(Model.PageViewModel.TotalPages))
         </a>
     }
 </div>
