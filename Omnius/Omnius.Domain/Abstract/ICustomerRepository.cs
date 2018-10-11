@@ -15,7 +15,9 @@ namespace Omnius.Domain.Abstract
         Customer Get(int id);
         IEnumerable<Customer> GetCustomers();
         IEnumerable<Customer> GetCustomers(int pageNumber, int pageSize);
+        IEnumerable<Customer> GetCustomers(int pageNumber, int pageSize, string familyNamefilter);
         void Update(Customer customer);
+        int GetNumberOfCustomers(string familyNameFilter);
         int GetNumberOfCustomers();
 
         // То, что связано с Контактами. Доступ через репозиторий Потребителя, 

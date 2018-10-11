@@ -13,95 +13,153 @@
        class="btn btn-success">
         <i class="glyphicon glyphicon-chevron-right"></i>
         Добавить
-    </a>
+    </a>  
+    
+    
+    <div>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>
+                        Фамилия @*@Html.DisplayNameFor(model => model.Customers)*@
+                    </th>
+                    <th>
+                        Имя @*@Html.DisplayNameFor(model => model.Name)*@
+                    </th>
+                    <th>
+                        Отчество @*@Html.DisplayNameFor(model => model.PaternalName)*@
+                    </th>
+                    <th>
+                        Пол
+                    </th>
+                    <th>
+                        Дата рождения @*@Html.DisplayNameFor(model => model.DateOfBirth)*@
+                    </th>
+                    <th>
 
-    <table class="table table-hover">
-        <thead>
-            <tr>
-                <th>
-                    Фамилия @*@Html.DisplayNameFor(model => model.Customers)*@
-                </th>
-                <th>
-                    Имя @*@Html.DisplayNameFor(model => model.Name)*@
-                </th>
-                <th>
-                    Отчество @*@Html.DisplayNameFor(model => model.PaternalName)*@
-                </th>
-                <th>
-                    Пол
-                </th>
-                <th>
-                    Дата рождения @*@Html.DisplayNameFor(model => model.DateOfBirth)*@
-                </th>
-                <th>
-
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model.Customers)
-            {
-                <tr onclick="location.href = '@(Url.Action("Edit", "Customer", new { id = item.ID, currentPage = Model.PageViewModel.PageNumber }))'" style="cursor: pointer;">
-                    <td>
-                        @Html.DisplayFor(modelItem => item.FamilyName)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Name)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.PaternalName)
-                    </td>
-                    <td>
-                        @switch (item.Sex)
-                        {
-                            case true:
-                                <p>Мужчина</p>
-                                break;
-                            case false:
-                                <p>Женщина</p>
-                                break;
-                        }
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.DateOfBirth)
-                    </td>
-                    <td>
-                        @Html.ActionLink("Удалить", "Delete", new { id = item.ID })
-                    </td>
+                    </th>
                 </tr>
+                <div style="display: none">
+                    <form id="myDIV">
+                        <tr>
+                            @if (Model.PageViewModel.FamilyNameFilter != "")
+                            {
+                                <td>
+                                    <input name="FamilyNameFilter" value=@(Model.PageViewModel.FamilyNameFilter)
+                                           class="form-control" type="text" placeholder="Фамилия">
+                                </td>
+                            }
+                            else
+                            {
+                                <td>
+                                    <input name="FamilyNameFilter"
+                                           class="form-control" type="text" placeholder="Фамилия">
+                                </td>
+                            }
+
+                            <td>
+                                <input class="form-control" type="text" placeholder="Пока не работает">
+                            </td>
+                            <td>
+                                <input class="form-control" type="text" placeholder="Пока не работает">
+                            </td>
+                            <td>
+                                <select class="form-control" style="width:200px;">
+                                    <option value="true"> Пока не работает</option>
+                                    <option value="false"> Пока не работает</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input class="form-control" type="text" placeholder="Пока не работает">
+                            </td>
+                            <td>
+                                @*@Html.ActionLink("Фильтровать", "List", new { FamilyNameFilter = Model.PageViewModel.FamilyNameFilter })*@
+
+                                <button type="submit" class="btn btn-success"><span>Отфильтровать</span><i class="glyphicon glyphicon-chevron-right"></i></button>
+                            </td>
+                        </tr>
+                    </form>
+                </div>
+            </thead>
+           
+            <tbody>
+                @foreach (var item in Model.Customers)
+                {
+                    <tr onclick="location.href = '@(Url.Action("Edit", "Customer", new { id = item.ID, currentPage = Model.PageViewModel.PageNumber }))'" style="cursor: pointer;">
+                        <td>
+                            @Html.DisplayFor(modelItem => item.FamilyName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PaternalName)
+                        </td>
+                        <td>
+                            @switch (item.Sex)
+                            {
+                                case true:
+                                    <p>Мужчина</p>
+                                    break;
+                                case false:
+                                    <p>Женщина</p>
+                                    break;
+                            }
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DateOfBirth)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Удалить", "Delete", new { id = item.ID })
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        @if (Model.PageViewModel.HasPreviousPage)
+        {
+            <a asp-action="List"
+               asp-route-page="@(Model.PageViewModel.PageNumber - 1)"
+                asp-route-familynamefilter="@(Model.PageViewModel.FamilyNameFilter)"
+               class="btn btn-default btn">
+                <i class="glyphicon glyphicon-chevron-left"></i>
+                Назад (страница @(Model.PageViewModel.PageNumber - 1) из @(Model.PageViewModel.TotalPages))
+            </a>
+        }
+        @if (Model.PageViewModel.HasNextPage)
+        {
+            <a asp-action="List"
+               asp-route-page="@(Model.PageViewModel.PageNumber + 1)"
+               asp-route-familynamefilter="@(Model.PageViewModel.FamilyNameFilter)"
+               class="btn btn-default btn">
+                <i class="glyphicon glyphicon-chevron-right"></i>
+                Вперед
+            </a>
+        }
+        @if (Model.PageViewModel.HasNextPage)
+        {
+            <a asp-action="List"
+               asp-route-page="@(Model.PageViewModel.TotalPages)"
+               asp-route-familynamefilter="@(Model.PageViewModel.FamilyNameFilter)"
+               class="btn btn-default btn">
+                <i class="glyphicon glyphicon-chevron-right"></i>
+                Последняя страница (@(Model.PageViewModel.TotalPages))
+            </a>
+        }
+
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myDIV");
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                } else {
+                    x.style.display = "none";
+                }
             }
-        </tbody>
-    </table>
+        </script>
+    </div>
 
-    @if (Model.PageViewModel.HasPreviousPage)
-    {
-    <a asp-action="List"
-       asp-route-page="@(Model.PageViewModel.PageNumber - 1)"
-       class="btn btn-default btn">
-        <i class="glyphicon glyphicon-chevron-left"></i>
-        Назад (страница @(Model.PageViewModel.PageNumber - 1) из @(Model.PageViewModel.TotalPages))
-    </a>
+    @{
+        Layout = "_Layout";
     }
-    @if (Model.PageViewModel.HasNextPage)
-    {
-        <a asp-action="List"
-           asp-route-page="@(Model.PageViewModel.PageNumber + 1)"
-           class="btn btn-default btn">
-            <i class="glyphicon glyphicon-chevron-right"></i>
-            Вперед
-        </a>
-    }
-    @if (Model.PageViewModel.HasNextPage)
-    {
-        <a asp-action="List"
-           asp-route-page="@(Model.PageViewModel.TotalPages)"
-           class="btn btn-default btn">
-            <i class="glyphicon glyphicon-chevron-right"></i>
-            Последняя страница (@(Model.PageViewModel.TotalPages))
-        </a>
-    }
-</div>
-
-@{
-    Layout = "_Layout";
-}

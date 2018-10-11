@@ -8,10 +8,14 @@ namespace Omnius.UI.Models
     {
         public int PageNumber { get; private set; }
         public int TotalPages { get; private set; }
+        public string FamilyNameFilter { get; private set; }
+        public string NameFilter { get; set; }
+        public string PaternalNameFilter { get; set; }
 
-        public PageViewModel(int count, int pageNumber, int pageSize)
+        public PageViewModel(int count, int pageNumber, int pageSize, string familyNameFilter)
         {
             PageNumber = pageNumber;
+            FamilyNameFilter = familyNameFilter;
             TotalPages = (int)Math.Ceiling(count / (double)pageSize);
         }
 

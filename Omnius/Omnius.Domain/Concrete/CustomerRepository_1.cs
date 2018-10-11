@@ -39,11 +39,38 @@ namespace Omnius.Domain.Concrete
             }
         }
 
+
+        public IEnumerable<Customer> GetCustomers(int pageSize, int pageNumber, string familyNameFilter)
+        {
+            IEnumerable<Customer> customers = null;
+
+            using (IDbConnection db = new SqlConnection(connectionString))
+            {
+                string sqlQuery = ("SELECT * FROM Administratum.dbo.Customers " +
+                    "WHERE FamilyName LIKE @FamilyNameFilter OR @FamilyNameFilter = ''"+
+                    "ORDER BY ID OFFSET @PageSize * (@PageNumber - 1) " +
+                    "ROWS FETCH NEXT @PageSize ROWS ONLY");
+
+                customers = db.Query<Customer>(sqlQuery, new { PageNumber = pageNumber, PageSize = pageSize, FamilyNameFilter = familyNameFilter });
+
+                return customers;
+            }
+        }
+
         public int GetNumberOfCustomers()
         {
             using (IDbConnection db = new SqlConnection(connectionString))
             {
                 return db.Query<int>("SELECT COUNT(*) FROM Administratum.dbo.Customers").FirstOrDefault();
+            }
+        }
+
+        public int GetNumberOfCustomers(string familyNameFilter)
+        {
+            using (IDbConnection db = new SqlConnection(connectionString))
+            {
+                return db.Query<int>("SELECT COUNT(*) FROM Administratum.dbo.Customers " +
+                    "WHERE FamilyName LIKE @FamilyNameFilter OR @FamilyNameFilter = ''", new {FamilyNameFilter = familyNameFilter }).FirstOrDefault();
             }
         }
 

@@ -14,7 +14,7 @@
         <div class="form-group">
             <label class="col-sm-2 control-label">@Html.DisplayNameFor(model => model.FamilyName)</label>
             <div class="col-sm-10">
-                <input asp-for="FamilyName" class="form-control" type="text" placeholder="Например, Иванов">
+                <input asp-for="FamilyName" onforminput="" class="form-control" type="text" placeholder="Например, Иванов">
                 <span asp-validation-for="FamilyName" class="text-danger"></span>
             </div>
         </div>

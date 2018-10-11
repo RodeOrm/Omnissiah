@@ -3,6 +3,7 @@ using Omnius.Domain.Entities;
 using Omnius.Domain.Abstract;
 using System.Collections.Generic;
 using Omnius.UI.Models;
+using System;
 
 namespace Omnius.UI.Controllers
 {
@@ -14,15 +15,21 @@ namespace Omnius.UI.Controllers
             repo = r;
         }
 
-        public ActionResult List(int page = 1)
+        public ActionResult List(int page = 1, string familyNameFilter = "")
         {
 
             int pageSize = 15;
+            string currentFamilyName;
 
-            var count = repo.GetNumberOfCustomers();
+            if (familyNameFilter == "")
+            { currentFamilyName = familyNameFilter;}
+            else
+            { currentFamilyName = String.Concat("%", familyNameFilter, "%"); }
+
+            var count = repo.GetNumberOfCustomers(currentFamilyName);
     
-            PageViewModel pageViewModel = new PageViewModel(count, page, pageSize); 
-            var items = repo.GetCustomers(pageSize, pageViewModel.PageNumber);
+            PageViewModel pageViewModel = new PageViewModel(count, page, pageSize, familyNameFilter); 
+            var items = repo.GetCustomers(pageSize, pageViewModel.PageNumber, currentFamilyName);
 
             IndexViewModel ViewModel = new IndexViewModel
             {
