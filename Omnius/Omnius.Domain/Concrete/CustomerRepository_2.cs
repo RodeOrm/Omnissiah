@@ -31,7 +31,7 @@ namespace Omnius.Domain.Concrete
         {
             using (IDbConnection db = new SqlConnection(connectionString))
             {
-                var sqlQuery = "INSERT INTO Administratum.dbo.СustomerContacts" +
+                var sqlQuery = "INSERT INTO Administratum.dbo.CustomerContacts" +
                                         "(ContactTypeID, CustomerID, Value) " +
                                 "VALUES (@ContactTypeID, @CustomerID, @Value)";
                 db.Execute(sqlQuery, contact);
@@ -55,11 +55,27 @@ namespace Omnius.Domain.Concrete
 
         public void UpdateContact(Contact contact)
         {
+            using (IDbConnection db = new SqlConnection(connectionString))
+            {
+                var sqlQuery = "UPDATE Administratum.dbo.CustomerContacts" +
+                               "SET ContactTypeID =@ContactTypeID, CustomerID = @CustomerID, Value = @Value) ";
+                db.Execute(sqlQuery, contact);
 
+                // если мы хотим получить id добавленного контакта
+                //var sqlQuery = ""INSERT INTO Administratum.dbo.СustomerContacts" +
+                //"(ContactTypeID, CustomerID, Value) " +
+                //"VALUES (@ContactTypeID, @CustomerID, @Value)"; SELECT CAST(SCOPE_IDENTITY() as int)";
+                //int? contactId = db.Query<int>(sqlQuery, contact).FirstOrDefault();
+                //contact.Id = contactId.Value;
+            }
         }
         public void DeleteContact(int id)
         {
-
+            using (IDbConnection db = new SqlConnection(connectionString))
+            {
+                var sqlQuery = "DELETE FROM Administratum.dbo.CustomerContacts WHERE Id = @id";
+                db.Execute(sqlQuery, new { id });
+            }
         }
 
 

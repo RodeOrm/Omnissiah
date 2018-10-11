@@ -2,11 +2,12 @@
 <h3></h3>
 <div class="container" style="overflow-x:auto;">
     <h4>Контакты</h4>
-    <table class="table table-hover">
+    
+    <table class="table table-hover" id="myTable">
         <thead>
             <tr>
                 <th>
-                    Тип контакта (компонент) @*@Html.DisplayNameFor(model => model.ContactTypeID)*@
+                    Тип контакта @*@Html.DisplayNameFor(model => model.ContactTypeID)*@
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.Value)
@@ -37,10 +38,11 @@
                         @Html.DisplayFor(modelItem => item.Value)
                     </td>
                     <td>
-                        @Html.ActionLink("Delete", "Удалить", new { id = item.ID })
+                        @Html.ActionLink("Удалить", "DeleteContact", new { id = item.ID })
                     </td>
                 </tr>
             }
+        
         </tbody>
     </table>
 </div>

@@ -1,0 +1,22 @@
+﻿@model Omnius.Domain.Entities.Contact
+
+@{
+    ViewData["Title"] = "Удаление контакта";
+}
+
+<h2>Удаление контакта</h2>
+
+<h3>Вы действительно хотите удалить этот контакт?</h3>
+<div class="container">
+    <form class="form-horizontal" method="Post">
+        <dt>
+            @Html.DisplayNameFor(model => model.Value)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Value)
+        </dd>
+
+        <button type="submit" class="button"><span>Удалить</span></button>
+        <a asp-action="List">Вернуться</a>
+    </form>
+</div>

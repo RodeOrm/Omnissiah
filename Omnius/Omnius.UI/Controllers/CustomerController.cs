@@ -94,7 +94,7 @@ namespace Omnius.UI.Controllers
             return RedirectToAction("List");
         }
 
-
+        [HttpGet]
         public ActionResult CreateContact(int customerID)
         {
             Contact newContact = new Contact { CustomerID = customerID };
@@ -114,6 +114,25 @@ namespace Omnius.UI.Controllers
                 return View("CreateContact");
             ;
         }
+
+        [HttpGet]
+        [ActionName("DeleteContact")]
+        public ActionResult ConfirmDeleteContact(int id)
+        {
+            Contact contact = repo.GetContact(id);
+            if (contact != null)
+                return View(contact);
+            return NotFound();
+        }
+
+        [HttpPost]
+        public ActionResult DeleteContact(int id)
+        {
+            repo.DeleteContact(id);
+            return RedirectToAction("List");
+        }
+
+
 
     }
 }
