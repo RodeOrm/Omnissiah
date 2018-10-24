@@ -5,6 +5,7 @@ using Omnius.Domain.Abstract;
 
 namespace Omnius.Domain.Entities
 {
+    [CustomerContactsAttribute]
     public class Customer
     //Aggregate Root
     {
@@ -51,7 +52,5 @@ namespace Omnius.Domain.Entities
         {
             get; set;
         }
-
-
     }
 }

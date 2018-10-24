@@ -1,13 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.Text.RegularExpressions;
+using System.Collections.Generic;
+using Omnius.Domain.Abstract;
+using System.Linq;
 
 namespace Omnius.Domain.Entities
 {
     public class ContactAttribute : ValidationAttribute
     {
+        public ContactAttribute()
+        {
+        }            
+
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {
             Contact contact = (Contact)validationContext.ObjectInstance;
@@ -15,16 +19,16 @@ namespace Omnius.Domain.Entities
             switch (contact.ContactTypeID)
             {
                 case 1:
-                    if  (!IsPhoneNumber(contact.Value))
+                    if (!IsPhoneNumber(contact.Value))
                     {
-                        return new ValidationResult($"Введенное значение не телефонный номер");
+                        return new ValidationResult($"Введенное значение не телефонный номер");  //N.B. $ is short-hand for String.Format
                     }
                     else
                     {
                         return ValidationResult.Success;
                     }
                 case 2:
-                    if (!IsEmail(contact.Value))
+                    if (!IsEmail(contact.Value)) //TODO: сделать для адреса
                     {
                         return ValidationResult.Success;
                     }

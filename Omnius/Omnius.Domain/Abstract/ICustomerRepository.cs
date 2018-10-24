@@ -23,7 +23,7 @@ namespace Omnius.Domain.Abstract
         // То, что связано с Контактами. Доступ через репозиторий Потребителя, 
         // т.к. не имеет своей ценности вне него
         // Возможно придется переделать
-        IEnumerable<Contact> GetContacts(Customer customer);
+        IEnumerable<Contact> GetContacts(int id); //id - идентификатор Потребителя
         void CreateContact(Contact contact);
         Contact GetContact(int id);
         void UpdateContact(Contact contact);

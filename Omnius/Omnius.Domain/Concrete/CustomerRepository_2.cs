@@ -10,7 +10,7 @@ namespace Omnius.Domain.Concrete
 {
     public partial class CustomerRepository : ICustomerRepository
     {
-        public IEnumerable<Contact> GetContacts(Customer customer)
+        public IEnumerable<Contact> GetContacts(int id)
         {
             IEnumerable<Contact> contacts = null;
 
@@ -20,7 +20,7 @@ namespace Omnius.Domain.Concrete
                     "INNER JOIN Administratum.dbo.CustomerContacts AS co " +
                     "ON c.ID = co.CustomerID AND c.ID = @Id");
 
-                contacts = db.Query<Contact>(sqlQuery, new { Id = customer.ID });
+                contacts = db.Query<Contact>(sqlQuery, new { Id = id});
 
                 return contacts;
             }
