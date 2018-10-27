@@ -7,17 +7,18 @@ namespace Omnius.Domain.Entities
 {
     [CustomerContactsAttribute]
     public class Customer
-    //Aggregate Root
     {
         public int ID { get; set; }
 
         [Display(Name = "Имя")]
         [Required(ErrorMessage = "Не указано имя")]
+        [StringLength(60, MinimumLength = 3, ErrorMessage = "Длина имени должна не меньше 3 символов")]
         public string Name { get; set; }
 
 
         [Display(Name = "Фамилия")]
         [Required(ErrorMessage = "Не указана фамилия")]
+        [StringLength(60, MinimumLength = 3, ErrorMessage ="Длина фамилии должна не меньше 3 символов")]
         public string FamilyName { get; set; }
 
 
@@ -38,19 +39,24 @@ namespace Omnius.Domain.Entities
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         [Display(Name = "Дата рождения")]
         [Required(ErrorMessage = "Не указана дата рождения")]
+        [CustomerDatesAttribute]
         public DateTime DateOfBirth { get; set; }
 
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true, NullDisplayText= "No Date of Death is Selected")]
         [Display(Name = "Дата смерти")]
+        [Obsolete]
         public DateTime DateOfDeath { get; set; }
-
-
-        public List<Contact> contacts = new List<Contact>();
 
         public IEnumerable<Contact> Contacts
         {
             get; set;
         }
+        /*
+        public IEnumerable<PersonalAccount> PersonalAccounts
+        {
+            get; set;
+        }
+        */
     }
 }

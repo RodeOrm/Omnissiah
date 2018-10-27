@@ -12,7 +12,7 @@ namespace Omnius.Domain.Entities
         [Required]
         public int ContactTypeID { get; set; }
 
-        public ContactType ContactType { get; set; }
+        //public ContactType ContactType { get; set; }
 
         [Display(Name = "Контактная информация")]
         [Required(ErrorMessage = "Укажите контактную информацию")]
