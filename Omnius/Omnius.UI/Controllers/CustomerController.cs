@@ -31,7 +31,7 @@ namespace Omnius.UI.Controllers
             PageViewModel pageViewModel = new PageViewModel(count, page, pageSize, familyNameFilter); 
             var items = repo.GetCustomers(pageSize, pageViewModel.PageNumber, currentFamilyName);
 
-            IndexViewModel ViewModel = new IndexViewModel
+            CustomerViewModel ViewModel = new CustomerViewModel
             {
                 PageViewModel = pageViewModel,
                 Customers = items
@@ -39,7 +39,6 @@ namespace Omnius.UI.Controllers
             
             return View(ViewModel);
         }
-
 
         public ActionResult Create()
         {
@@ -63,7 +62,7 @@ namespace Omnius.UI.Controllers
         public ActionResult Edit(int id, int currentPage)
         {
             Customer customer = repo.Get(id);
-            customer.Contacts = repo.GetContacts(customer);
+            customer.Contacts = repo.GetContacts(customer.ID);
           
 
             if (customer != null)
@@ -138,8 +137,5 @@ namespace Omnius.UI.Controllers
             repo.DeleteContact(id);
             return RedirectToAction("List");
         }
-
-
-
     }
 }

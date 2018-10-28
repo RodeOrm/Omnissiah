@@ -10,18 +10,18 @@ namespace Omnius.Domain.Entities
     {
         public CustomerContactsAttribute()
         {
-            ErrorMessage = "Имя не должно совпадать с фамилией";
+            ErrorMessage = "Дата смерти должна быть позже даты рождения";
         }
 
         public override bool IsValid(object value)
         {
             Customer c = value as Customer;
             
-            if (c.Name == c.FamilyName)
+           if ((c.DateOfDeath >= c.DateOfBirth)||(c.DateOfDeath == null))
             {
-                return false;
+                return true; 
             }
-            return true;
+            return false;
         }
     }
 }

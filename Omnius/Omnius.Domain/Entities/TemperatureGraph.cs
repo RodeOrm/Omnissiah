@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Omnius.Domain.Entities
 {
-    class TemperatureGraph
+    public class TemperatureGraph
     {
         public int ID { get; set; }
         public string Name { get; set; }
@@ -14,7 +14,7 @@ namespace Omnius.Domain.Entities
         }
     }
 
-    class TemperatureGraphValue
+    public class TemperatureGraphValue
     {
         public int TemperatureGraphID { get; set; }
         public int AirTemperature { get; set; }

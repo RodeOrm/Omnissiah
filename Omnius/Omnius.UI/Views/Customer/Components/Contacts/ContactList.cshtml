@@ -13,33 +13,56 @@
                     @Html.DisplayNameFor(model => model.Value)
                 </th>
                 <th></th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
             @foreach (var item in Model)
             {
-                <tr onclick="location.href = '@(Url.Action("Edit", "Contact", new { id = item.ID }))'" style="cursor: pointer;">
-                    <td>
-                        @*TODO: При создании админки переделать на произвольный выбор*@
-                        @switch (item.ContactTypeID)
-                        {
-                            case 1:
-                                <p>Мобильный телефон</p>
-                                break;
-                            case 2:
-                                <p>Почтовый адрес</p>
-                                break;
-                            case 3:
-                                <p>Электронная почта</p>
-                                break;
-                        }
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Value)
-                    </td>
-                    <td>
+            <tr onclick="location.href = '@(Url.Action("Edit", "Contact", new { id = item.ID }))'" style="cursor: pointer;">
+                <td>
+                    @*TODO: При создании админки переделать на произвольный выбор*@
+                    @switch (item.ContactTypeID)
+                    {
+                        case 1:
+                            <p>Мобильный телефон</p>
+                            break;
+                        case 2:
+                            <p>Почтовый адрес</p>
+                            break;
+                        case 3:
+                            <p>Электронная почта</p>
+                            break;
+                    }
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Value)
+                </td>
+                <td>
+                    @*TODO: При создании админки переделать на произвольный выбор*@
+                    @switch (item.ContactTypeID)
+                    {
+                        case 1:
+                        <td>
+                            @Html.ActionLink("Позвонить", "CallToNumber", new { id = item.ID })
+                        </td>
+                        break;
+                        case 2:
+                        <td>
+                            @Html.ActionLink("Распечатать шаблон", "PrintSample", new { id = item.ID })
+                        </td>
+                        break;
+                        case 3:
+                        <td>
+                            @Html.ActionLink("Написать", "WritToNumber", new { id = item.ID })
+                        </td>
+                        break;
+                     }
+                  </td>
+                  <td>
                         @Html.ActionLink("Удалить", "DeleteContact", new { id = item.ID })
-                    </td>
+                  </td>
+
                 </tr>
             }
         

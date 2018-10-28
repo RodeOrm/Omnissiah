@@ -5,7 +5,7 @@ using Omnius.Domain.Entities;
 
 namespace Omnius.UI.Models
 {
-    public class IndexViewModel
+    public class CustomerViewModel
     {
         public IEnumerable<Customer> Customers { get; set; }
         public PageViewModel PageViewModel { get; set; }

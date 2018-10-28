@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Omnius.Domain.Entities
 {
-    class NetworkLine
+    public class NetworkLine
     {
         public int ID { get; set; }
         public int SourceItemID { get; set; }  // питающий элемент

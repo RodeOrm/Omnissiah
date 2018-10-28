@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Omnius.Domain.Entities
 {
-    class PersonalAccount
+    public class PersonalAccount
     {
         public int ID { get; set; }
         public string Number { get; set; }
@@ -16,7 +16,7 @@ namespace Omnius.Domain.Entities
         }
     }
 
-    class AccountPoint
+    public class AccountPoint
     {
         public int ID { get; set; }
 

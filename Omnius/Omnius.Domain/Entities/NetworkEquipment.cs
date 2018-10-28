@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Omnius.Domain.Entities
 {
-    class NetworkEquipment
+    public class NetworkEquipment
     {
         public int ID { get; set; }
         public int NetworkLineID;
@@ -23,7 +23,7 @@ namespace Omnius.Domain.Entities
     }
 
     //TODO: Выделить затем в отдельный класс Справочников
-    class NetworkEquipmentType
+    public class NetworkEquipmentType
     /*
     Трубопровод отопления
     Трубопровод горячего водоснабжения
@@ -34,14 +34,14 @@ namespace Omnius.Domain.Entities
         private string value;
     }
 
-    class NetworkPipelineDiameter
+    public class NetworkPipelineDiameter
     // Условный диаметр трубопровода
     {
         public int ID { get; set; }
         private int value;
     }
 
-    class NetworkPipelineLayingType
+    public class NetworkPipelineLayingType
     // Тип прокладки трубопровода
     {
         public int ID { get; set; }

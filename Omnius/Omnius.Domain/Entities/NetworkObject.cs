@@ -5,19 +5,19 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Omnius.Domain.Entities
 {
-    class NetworkObject
+    public class NetworkObject
     {
         public int ID { get; set; }
         
     }
 
-    class ConsumptionObject: NetworkObject
+    public class ConsumptionObject: NetworkObject
     {
         [Required]
         public string Address { get; set; }
     }
 
-    class GenerationObject: NetworkObject
+    public class GenerationObject: NetworkObject
     {
         [Obsolete]
         public string Address { get; set; }

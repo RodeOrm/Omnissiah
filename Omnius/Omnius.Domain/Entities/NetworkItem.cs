@@ -4,15 +4,16 @@ using System.Text;
 
 namespace Omnius.Domain.Entities
 {
-    class NetworkItem
+    public class NetworkItem
     {
         public int ID { get; set; }
         public int NetworkItemTypeID {get; set;}
 
     }
 
-    class NetworkItemType
+    public class NetworkItemType
     {
         public int ID { get; set; }
+        public string Name { get; set; }
     }
 }

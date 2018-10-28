@@ -9,13 +9,16 @@
     <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jquery.validation.unobtrusive/3.2.6/jquery.validate.unobtrusive.min.js"></script>
     <h3>Редактирование Потребителя</h3>
+    
     <form class="form-horizontal" method="Post">
+
         <div class="form-group">
             <label class="col-sm-2 control-label">@Html.DisplayNameFor(model => model.FamilyName)</label>
             <div class="col-sm-10">
                 <input asp-for="FamilyName" class="form-control" type="text" placeholder="Например, Иванов">
                 <span asp-validation-for="FamilyName" class="text-danger"></span>
             </div>
+
         </div>
         <div class="form-group">
             <label class="col-sm-2 control-label">@Html.DisplayNameFor(model => model.Name)</label>
@@ -47,8 +50,36 @@
                 <span asp-validation-for="DateOfBirth" class="text-danger"></span>
             </div>
         </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">@Html.DisplayNameFor(model => model.DateOfDeath)</label>
+            <div class="col-sm-10">
+                @Html.TextBoxFor(model => model.DateOfDeath, "{0:yyyy-MM-dd}", new { @class = "form-control", type = "date" })
+                <span asp-validation-for="DateOfDeath" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">@Html.DisplayNameFor(model => model.FirstCase)</label>
+            <div class="col-sm-10">
+                <input asp-for="FirstCase" class="form-control" type="text" placeholder="Например, Иванова Ивана Ивановича">
+                <span asp-validation-for="FirstCase" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">@Html.DisplayNameFor(model => model.SecondCase)</label>
+            <div class="col-sm-10">
+                <input asp-for="SecondCase" class="form-control" type="text" placeholder="Например, Иванову Ивану Ивановичу">
+                <span asp-validation-for="SecondCase" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">@Html.DisplayNameFor(model => model.INN)</label>
+            <div class="col-sm-10">
+                <input asp-for="INN" class="form-control" type="text" placeholder="12 цифр ИНН ФЛ или 10 ЮЛ">
+                <span asp-validation-for="INN" class="text-danger"></span>
+            </div>
+        </div>
         @* @await Html.PartialAsync("_ContactList", Model.Contacts)*@
-
+        <div class="validation" asp-validation-summary="ModelOnly"> </div>
         <div>
             <button type="reset" onclick="myFunction()" class="btn alert-info">
                 <span>Контакты  </span>
@@ -81,8 +112,8 @@
             }
         </script>
 
-               
+
         <button type="submit" class="btn btn-success"><span>Изменить Потребителя</span><i class="glyphicon glyphicon-chevron-right"></i></button>
     </form>
-  
+
 </div>

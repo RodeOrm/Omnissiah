@@ -67,9 +67,7 @@ G:\StagingArea\Omnius\Omnius.UI\obj\Debug\netcoreapp2.1\Omnius.UI.Views.pdb
 G:\StagingArea\Omnius\Omnius.UI\obj\Debug\netcoreapp2.1\Omnius.UI.csproj.CopyComplete
 G:\StagingArea\Omnius\Omnius.UI\obj\Debug\netcoreapp2.1\Omnius.UI.dll
 G:\StagingArea\Omnius\Omnius.UI\obj\Debug\netcoreapp2.1\Omnius.UI.pdb
-G:\StagingArea\Omnius\Omnius.UI\obj\Debug\netcoreapp2.1\Razor\Views\Customer\_ContactList.g.cshtml.cs
 G:\StagingArea\Omnius\Omnius.UI\obj\Debug\netcoreapp2.1\Razor\Views\Customer\Index.g.cshtml.cs
 G:\StagingArea\Omnius\Omnius.UI\obj\Debug\netcoreapp2.1\Razor\Views\Customer\Components\Contacts\ContactList.g.cshtml.cs
 G:\StagingArea\Omnius\Omnius.UI\obj\Debug\netcoreapp2.1\Razor\Views\Customer\CreateContact.g.cshtml.cs
-G:\StagingArea\Omnius\Omnius.UI\obj\Debug\netcoreapp2.1\Razor\Views\Customer\_CreateContact.g.cshtml.cs
 G:\StagingArea\Omnius\Omnius.UI\obj\Debug\netcoreapp2.1\Razor\Views\Customer\DeleteContact.g.cshtml.cs

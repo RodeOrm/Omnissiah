@@ -19,7 +19,7 @@ namespace Omnius.UI.Components
      
         public IViewComponentResult Invoke(Customer c)
         {
-            contacts = repo.GetContacts(c);
+            contacts = repo.GetContacts(c.ID);
             return View("ContactList",contacts);
         }
     }

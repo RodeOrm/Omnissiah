@@ -87,8 +87,8 @@ namespace Omnius.Domain.Concrete
             using (IDbConnection db = new SqlConnection(connectionString))
             {
                 var sqlQuery = "INSERT INTO Administratum.dbo.Customers " +
-                                        "(Name, FamilyName, PaternalName, FirstCase, SecondCase, Sex) " +
-                                "VALUES (@Name, @FamilyName, @PaternalName, @FirstCase, @SecondCase, @Sex)";
+                                        "(Name, FamilyName, PaternalName, FirstCase, SecondCase, Sex, INN, DateOfBirth, DateOfDeath) " +
+                                "VALUES (@Name, @FamilyName, @PaternalName, @FirstCase, @SecondCase, @Sex, @INN, @DateOfBirth, @DateOfDeath )";
                 db.Execute(sqlQuery, customer);
 
                 // если мы хотим получить id добавленного пользователя
@@ -104,6 +104,7 @@ namespace Omnius.Domain.Concrete
             {
                 var sqlQuery = "UPDATE Administratum.dbo.Customers " +
                                 "SET Name = @Name, FamilyName = @FamilyName, PaternalName = @PaternalName, Sex = @Sex, DateOfBirth = @DateOfBirth " +
+                                ", DateOfDeath = @DateOfDeath, INN = @INN " +
                                 "WHERE Id = @Id";
                 db.Execute(sqlQuery, customer);
             }

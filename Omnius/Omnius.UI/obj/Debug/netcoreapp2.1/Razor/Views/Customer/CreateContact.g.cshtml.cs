@@ -91,17 +91,17 @@ using NonFactors.Mvc.Grid;
     ");
             EndContext();
             BeginContext(430, 1275, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "baf58cee2b0943949631dcfff82adeb0", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0936aa93efb04a779460ccfc134d0547", async() => {
                 BeginContext(474, 161, true);
                 WriteLiteral("\r\n        <div class=\"form-group\">\r\n            <label class=\"col-sm-2 control-label\">Тип контакта</label>\r\n            <div class=\"col-sm-10\">\r\n                ");
                 EndContext();
                 BeginContext(635, 299, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "57e0167344d04ae88b91642795179e3c", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4fe50de4037a4b80a44248b2928a829f", async() => {
                     BeginContext(709, 22, true);
                     WriteLiteral("\r\n                    ");
                     EndContext();
                     BeginContext(731, 45, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "30066021ffcc4a90ac61103fb1f270be", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "feade54dfdbc4c1e9d0a919f0892605d", async() => {
                         BeginContext(749, 18, true);
                         WriteLiteral(" Мобильный телефон");
                         EndContext();
@@ -123,7 +123,7 @@ using NonFactors.Mvc.Grid;
                     WriteLiteral("\r\n                    ");
                     EndContext();
                     BeginContext(798, 42, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "879abbc36eff43ea8d3a879ca6732e59", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e7a2fe94a9054bd9a9fb5f6c5cabedee", async() => {
                         BeginContext(816, 15, true);
                         WriteLiteral(" Почтовый адрес");
                         EndContext();
@@ -145,7 +145,7 @@ using NonFactors.Mvc.Grid;
                     WriteLiteral("\r\n                    ");
                     EndContext();
                     BeginContext(862, 45, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "637ec6595c9f483e9b307062b61c9c36", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3b8904b4245649eebed414475d36cdbd", async() => {
                         BeginContext(880, 18, true);
                         WriteLiteral(" Электронная почта");
                         EndContext();
@@ -200,7 +200,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_SelectTagHelper.For = ModelExpressionProvi
                 WriteLiteral("</label>\r\n            <div class=\"col-sm-10\">\r\n                ");
                 EndContext();
                 BeginContext(1161, 92, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "6daf5be09c9b4a0c82cfc8ce2f1351fc", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "3ba1fbe124b54c4c9ec3ce3959d86c0c", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper>();
@@ -227,7 +227,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
                 WriteLiteral("\r\n                ");
                 EndContext();
                 BeginContext(1271, 60, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("span", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "476828d9c86b4ece83cd3deee4d5c823", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("span", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6cc0330744a64ee294c38fe71c106f3b", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.ValidationMessageTagHelper>();
@@ -251,7 +251,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper.For = ModelExpr
                 WriteLiteral("\r\n            </div>\r\n        </div>\r\n\r\n        ");
                 EndContext();
                 BeginContext(1379, 169, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e454aa7ffe0f403f94115ca9887fa804", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "203a84296bdd48f58cbe3f6b819924f7", async() => {
                     BeginContext(1440, 104, true);
                     WriteLiteral("\r\n            <i class=\"glyphicon glyphicon-chevron-left\"></i>\r\n            Вернуться в Реестр\r\n        ");
                     EndContext();
