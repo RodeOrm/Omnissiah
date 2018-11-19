@@ -51,8 +51,8 @@ namespace Omnius.UI.Controllers
 
             if (ModelState.IsValid)
             {
-                repo.Create(customer);
-                return RedirectToAction("List");
+                customer.ID = repo.Create(customer);
+                return RedirectToAction("Edit", new { id = customer.ID });
             }
             else
                 return View(customer);

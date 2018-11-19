@@ -10,7 +10,7 @@ namespace Omnius.Domain.Abstract
 {
     public interface ICustomerRepository
     {
-        void Create(Customer customer);
+        int Create(Customer customer);
         void Delete(int id);
         Customer Get(int id);
         IEnumerable<Customer> GetCustomers();

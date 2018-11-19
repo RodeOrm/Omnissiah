@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Omnius.Domain", "Omnius.Dom
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Omnius.UI", "Omnius.UI\Omnius.UI.csproj", "{6B20F9EA-954B-4AAE-8939-340387CD17EB}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Omnius.Test", "Omnius.Test\Omnius.Test.csproj", "{180B2B4E-6DFE-4EE0-A92C-1B8A90ADC93D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{6B20F9EA-954B-4AAE-8939-340387CD17EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B20F9EA-954B-4AAE-8939-340387CD17EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B20F9EA-954B-4AAE-8939-340387CD17EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{180B2B4E-6DFE-4EE0-A92C-1B8A90ADC93D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{180B2B4E-6DFE-4EE0-A92C-1B8A90ADC93D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{180B2B4E-6DFE-4EE0-A92C-1B8A90ADC93D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{180B2B4E-6DFE-4EE0-A92C-1B8A90ADC93D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

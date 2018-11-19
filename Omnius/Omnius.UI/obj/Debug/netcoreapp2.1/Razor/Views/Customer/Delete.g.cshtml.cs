@@ -29,7 +29,7 @@ using NonFactors.Mvc.Grid;
 #line default
 #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"316176ed392ab4886eb50f63355dd81a23cc2fa3", @"/Views/Customer/Delete.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ef610cff33c416990315850c30bdaab077b902b2", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4c354c0482baa1e50b4d03cb4d8892992660ea44", @"/Views/_ViewImports.cshtml")]
     public class Views_Customer_Delete : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Omnius.Domain.Entities.Customer>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "List", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -72,7 +72,7 @@ using NonFactors.Mvc.Grid;
             WriteLiteral("\n<h3>Вы действительно хотите удалить этого потребителя?</h3>\n<div>\n    <hr />\n    ");
             EndContext();
             BeginContext(162, 1515, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "466e18dae4f14c25bfebd14526962486", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5eabc03a0cdc41e2866e15e2c074c3ae", async() => {
                 BeginContext(206, 26, true);
                 WriteLiteral("\n        <dt>\n            ");
                 EndContext();
@@ -237,7 +237,7 @@ using NonFactors.Mvc.Grid;
                 WriteLiteral("\n        </dd>\n        <button type=\"submit\" class=\"button\"><span>Удалить</span></button>\n\n        ");
                 EndContext();
                 BeginContext(1631, 34, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "27f445d670964723887c980de4956262", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "59ddbf4701e4400f9d30247befd502a9", async() => {
                     BeginContext(1652, 9, true);
                     WriteLiteral("Вернуться");
                     EndContext();

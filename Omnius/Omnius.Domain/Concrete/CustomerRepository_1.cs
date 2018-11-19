@@ -82,19 +82,17 @@ namespace Omnius.Domain.Concrete
             }
         }
 
-        public void Create(Customer customer)
+        public int Create(Customer customer)
         {
             using (IDbConnection db = new SqlConnection(connectionString))
             {
+                // если мы хотим получить id добавленного пользователя
                 var sqlQuery = "INSERT INTO Administratum.dbo.Customers " +
                                         "(Name, FamilyName, PaternalName, FirstCase, SecondCase, Sex, INN, DateOfBirth, DateOfDeath) " +
-                                "VALUES (@Name, @FamilyName, @PaternalName, @FirstCase, @SecondCase, @Sex, @INN, @DateOfBirth, @DateOfDeath )";
-                db.Execute(sqlQuery, customer);
-
-                // если мы хотим получить id добавленного пользователя
-                //var sqlQuery = "INSERT INTO Customers (Name) VALUES(@Name); SELECT CAST(SCOPE_IDENTITY() as int)";
-                //int? customerId = db.Query<int>(sqlQuery, customer).FirstOrDefault();
-                //customer.Id = customerId.Value;
+                                "VALUES (@Name, @FamilyName, @PaternalName, @FirstCase, @SecondCase, @Sex, @INN, @DateOfBirth, @DateOfDeath )" +
+                                "; SELECT CAST(SCOPE_IDENTITY() as int)"; 
+                int customerId = db.Query<int>(sqlQuery, customer).FirstOrDefault();
+                return customerId;
             }
         }
 
@@ -114,7 +112,9 @@ namespace Omnius.Domain.Concrete
         {
             using (IDbConnection db = new SqlConnection(connectionString))
             {
-                var sqlQuery = "DELETE FROM Administratum.dbo.Customers WHERE Id = @id";
+                var sqlQuery = "DELETE FROM Administratum.dbo.CustomerContacts WHERE CustomerId = @id";
+                db.Execute(sqlQuery, new { id });
+                sqlQuery = "DELETE FROM Administratum.dbo.Customers WHERE Id = @id";
                 db.Execute(sqlQuery, new { id });
             }
         }
