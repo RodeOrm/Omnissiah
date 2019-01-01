@@ -137,5 +137,34 @@ namespace Omnius.UI.Controllers
             repo.DeleteContact(id);
             return RedirectToAction("List");
         }
-    }
+
+		[HttpGet]
+		public ActionResult EditContact(int id)
+		{
+			Contact contact = repo.GetContact(id);
+			Contact contact_pre = contact;
+
+			if (contact != null)
+			{
+				return View(contact);
+			}
+			else
+			{
+				return NotFound();
+			}
+		}
+
+		[HttpPost]
+		public ActionResult EditContact(Contact contact)
+		{
+			if (ModelState.IsValid)
+			{
+				repo.UpdateContact(contact);
+				return RedirectToAction("Edit", new { id = contact.CustomerID });
+			}
+			else
+				return View(contact);
+			;
+		}
+	}
 }

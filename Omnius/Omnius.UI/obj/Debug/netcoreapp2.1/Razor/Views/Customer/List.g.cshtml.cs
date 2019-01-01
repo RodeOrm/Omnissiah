@@ -85,7 +85,7 @@ using Omnius.UI.Models;
             WriteLiteral("\n<div class=\"container\" style=\"overflow-x:auto;\">\n    <h3>Реестр потребителей</h3>\n\n    ");
             EndContext();
             BeginContext(191, 138, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d136f106d54d4585b355153a60e7aa29", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3bd4771be0174cadb70e25da40d0b4af", async() => {
                 BeginContext(245, 80, true);
                 WriteLiteral("\n        <i class=\"glyphicon glyphicon-chevron-right\"></i>\n        Добавить\n    ");
                 EndContext();
@@ -120,7 +120,7 @@ using Omnius.UI.Models;
             WriteLiteral("\n                    </th>\n                    <th>\n\n                    </th>\n                </tr>\n                <div style=\"display: none\">\n                    ");
             EndContext();
             BeginContext(1186, 2109, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "68177fdd3318438b948a4dfc2753541f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4cecb77b6575461aaa4f0eb25dfa6aec", async() => {
                 BeginContext(1203, 30, true);
                 WriteLiteral("\n                        <tr>\n");
                 EndContext();
@@ -171,7 +171,7 @@ WriteAttributeValue("", 1450, Model.PageViewModel.FamilyNameFilter, 1450, 39, fa
                                     ");
                 EndContext();
                 BeginContext(2486, 47, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "169b144cea4e402d8c6b07d2500ced5e", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "78992e03399b4269b2c3e79a4397842b", async() => {
                     BeginContext(2507, 17, true);
                     WriteLiteral(" Пока не работает");
                     EndContext();
@@ -193,7 +193,7 @@ WriteAttributeValue("", 1450, Model.PageViewModel.FamilyNameFilter, 1450, 39, fa
                 WriteLiteral("\n                                    ");
                 EndContext();
                 BeginContext(2570, 48, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fb4c662828c64fc0aae75b61bc0b590c", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d5b2f8af4ed44dd4bb5cdf96b702a054", async() => {
                     BeginContext(2592, 17, true);
                     WriteLiteral(" Пока не работает");
                     EndContext();
@@ -361,7 +361,7 @@ WriteAttributeValue("", 3495, Url.Action("Edit", "Customer", new { id = item.ID,
             WriteLiteral("            ");
             EndContext();
             BeginContext(4901, 409, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "be8638b4d2584edca86039f58d9fb879", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c9ba13f4bb494a9994dcb2b77ba9a1d4", async() => {
                 BeginContext(5120, 98, true);
                 WriteLiteral("\n                <i class=\"glyphicon glyphicon-chevron-left\"></i>\n                Назад (страница ");
                 EndContext();
@@ -443,7 +443,7 @@ WriteAttributeValue("", 3495, Url.Action("Edit", "Customer", new { id = item.ID,
             WriteLiteral("            ");
             EndContext();
             BeginContext(5389, 324, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5ae14f77c56944058a2901c474c53167", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "990cae44399647e4b5d9a2d1cc26ec8d", async() => {
                 BeginContext(5607, 102, true);
                 WriteLiteral("\n                <i class=\"glyphicon glyphicon-chevron-right\"></i>\n                Вперед\n            ");
                 EndContext();
@@ -505,7 +505,7 @@ WriteAttributeValue("", 3495, Url.Action("Edit", "Customer", new { id = item.ID,
             WriteLiteral("            ");
             EndContext();
             BeginContext(5792, 368, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c859012840254236819f240bff283981", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "84f42f4d3232471daaae3e837bd6c159", async() => {
                 BeginContext(6006, 103, true);
                 WriteLiteral("\n                <i class=\"glyphicon glyphicon-chevron-right\"></i>\n                Последняя страница (");
                 EndContext();

@@ -19,7 +19,7 @@
         <tbody>
             @foreach (var item in Model)
             {
-            <tr onclick="location.href = '@(Url.Action("Edit", "Contact", new { id = item.ID }))'" style="cursor: pointer;">
+            <tr onclick="location.href = '@(Url.Action("EditContact", new { id = item.ID }))'" style="cursor: pointer;">
                 <td>
                     @*TODO: При создании админки переделать на произвольный выбор*@
                     @switch (item.ContactTypeID)

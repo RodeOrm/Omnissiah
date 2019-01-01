@@ -1,13 +1,14 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
+
 namespace Omnius.Domain.Entities
 {
     public class Contact
     {
+		//[Required]
         public int ID { get; set; }
 
-        [Required]
-        public int CustomerID { get; set; }
+		public int CustomerID { get; set; }
 
         [Required]
         public int ContactTypeID { get; set; }

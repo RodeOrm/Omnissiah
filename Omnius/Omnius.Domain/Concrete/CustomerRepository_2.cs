@@ -57,8 +57,9 @@ namespace Omnius.Domain.Concrete
         {
             using (IDbConnection db = new SqlConnection(connectionString))
             {
-                var sqlQuery = "UPDATE Administratum.dbo.CustomerContacts" +
-                               "SET ContactTypeID =@ContactTypeID, CustomerID = @CustomerID, Value = @Value) ";
+                var sqlQuery = "UPDATE Administratum.dbo.CustomerContacts " +
+                               "SET Value = @Value " +
+							   "WHERE ID = @Id";
                 db.Execute(sqlQuery, contact);
 
                 // если мы хотим получить id добавленного контакта
